@@ -1,5 +1,5 @@
 # vaibhavpandeyvpz/consoler
-Extensions for ```Symfony\Component\Console\Application``` and ```Symfony\Component\Console\Command\Command``` from [symfony/console](https://github.com/symfony/console), adding support for [container-interop](https://github.com/container-interop/container-interop) compatible service container(s).
+Extensions for ```Symfony\Component\Console\Application``` and ```Symfony\Component\Console\Command\Command``` from [symfony/console](https://github.com/symfony/console), adding support for [container-interop/container-interop](https://github.com/container-interop/container-interop) compatible service container(s).
 
 Install
 ------
