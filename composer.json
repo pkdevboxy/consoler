@@ -1,0 +1,16 @@
+{
+    "autoload": {
+        "psr-4": { "Consoler\\": "src/" }
+    },
+    "description": "Extensions for symfony/console package, adding support for container-interop/container-interop compatible service container(s).",
+    "license": "MIT",
+    "name": "vaibhavpandeyvpz/consoler",
+    "require": {
+        "container-interop/container-interop": "^1.1",
+        "symfony/console": "^3.0"
+    },
+    "suggest": {
+        "pimple/pimple": "Required to make use of \\Consoler\\Container class for quick start"
+    },
+    "type": "library"
+}
