@@ -50,6 +50,13 @@ $app->add(new InstallCommand());
 $app->run();
 ```
 
+Note
+------
+To use ```Consoler\Container```, you also need to install [pimple/pimple](https://github.com/silexphp/Pimple). To do so, run following:
+```bash
+composer require pimple/pimple
+```
+
 License
 ------
 See [LICENSE.md](https://github.com/vaibhavpandeyvpz/consoler/blob/master/LICENSE.md) file.
