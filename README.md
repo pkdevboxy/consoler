@@ -9,24 +9,6 @@ composer require vaibhavpandeyvpz/consoler
 
 Usage
 ------
-Let your command classes extend ```Consoler\Command```.
-
-```php
-use Consoler\Command;
-use Symfony\Component\Console\Input\InputInterface;
-use Symfony\Component\Console\Output\OutputInterface;
-
-class InstallCommand extends Command
-{
-    protected function execute(InputInterface $input, OutputInterface $output)
-    {
-        /** @var \PDO $pdo */
-        $pdo = $this->getContainer()->get('pdo');
-        // ...more code!
-    }
-}
-```
-
 Create an instance of ```Consoler\Application```, assign it a ```Interop\Container\ContainerInterface``` instance and run as usual.
 
 ```php
@@ -44,6 +26,24 @@ $container->singleton('pdo', function ()
 $app->add(new InstallCommand());
 
 $app->run();
+```
+
+Let your command classes extend ```Consoler\Command```.
+
+```php
+use Consoler\Command;
+use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Console\Output\OutputInterface;
+
+class InstallCommand extends Command
+{
+    protected function execute(InputInterface $input, OutputInterface $output)
+    {
+        /** @var \PDO $pdo */
+        $pdo = $this->getContainer()->get('pdo');
+        // ...more code!
+    }
+}
 ```
 
 Note
