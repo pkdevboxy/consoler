@@ -3,6 +3,7 @@
         "psr-4": { "Consoler\\": "src/" }
     },
     "description": "Extensions for symfony/console package, adding support for container-interop/container-interop compatible service container(s).",
+    "keywords": [ "symfony", "console", "service", "container", "interop", "extension" ],
     "license": "MIT",
     "name": "vaibhavpandeyvpz/consoler",
     "require": {
