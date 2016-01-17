@@ -10,7 +10,7 @@
         "symfony/console": "^3.0"
     },
     "suggest": {
-        "pimple/pimple": "Required to make use of \\Consoler\\Container class for quick start"
+        "vaibhavpandeyvpz/katora": "In need of a lightweight, standards compliant service container"
     },
     "type": "library"
 }

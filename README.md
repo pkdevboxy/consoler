@@ -12,8 +12,6 @@ Usage
 Let your command classes extend ```Consoler\Command```.
 
 ```php
-<?php
-
 use Consoler\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -33,17 +31,15 @@ Create an instance of ```Consoler\Application```, assign it a ```Interop\Contain
 
 ```php
 #!/usr/bin/env php
-<?php
-
-require_once __DIR__ . '/vendor/autoload.php';
 
 $app = new Consoler\Application();
-$app->setContainer($container = new Consoler\Container());
 
-$container['pdo'] = function ($length)
+$app->setContainer($container = new Katora\Container());
+
+$container->singleton('pdo', function ()
 {
     return new PDO(/** args */);
-};
+});
 
 $app->add(new InstallCommand());
 
@@ -52,9 +48,9 @@ $app->run();
 
 Note
 ------
-For using ```Consoler\Container```, you also need to install [pimple/pimple](https://github.com/silexphp/Pimple). To do so, run following:
+You may also want to install [vaibhavpandeyvpz/katora](https://github.com/vaibhavpandeyvpz/katora) for using ```Katora\Container```. To do so, run following:
 ```bash
-composer require pimple/pimple
+composer require vaibhavpandeyvpz/katora
 ```
 
 License
